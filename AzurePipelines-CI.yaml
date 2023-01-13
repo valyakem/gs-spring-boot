@@ -1,5 +1,5 @@
 pool:
-  vmImage: 'ubuntu-16.04' # Hosted Ubuntu 1604
+  vmImage: 'ubuntu-latest' # Hosted Ubuntu 1604
   demands: maven
 
 steps:
@@ -7,7 +7,7 @@ steps:
   displayName: 'Maven app/pom.xml'
   inputs:
     mavenPomFile: 'app/pom.xml'
-    codeCoverageToolOption: Cobertura
+    # codeCoverageToolOption: Cobertura
 
 - task: CopyFiles@2
   displayName: 'Copy Files to: $(build.artifactstagingdirectory)'
